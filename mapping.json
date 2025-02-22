@@ -1,0 +1,60 @@
+[
+    {
+        "reference": "homepage",
+        "file": "homepage.handlebars",
+        "path": "/",
+        "collections": [
+            {
+                "source": "orbisdb",
+                "slug": "home_intro",
+                "key": "post_type",
+                "value": "home-intro",
+                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}'"
+            },
+            {
+                "source": "orbisdb",
+                "slug": "home_proposal",
+                "key": "post_type",
+                "value": "home-proposal",
+                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}'"
+            },
+            {
+                "source": "orbisdb",
+                "slug": "home_about",
+                "key": "post_type",
+                "value": "home-about",
+                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}'"
+            },
+            {
+                "source": "orbisdb",
+                "slug": "home_features",
+                "key": "post_type",
+                "value": "home-feature",
+                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}' ORDER BY position ASC;"
+            }
+        ],
+        "ripples": []
+    },
+    {
+        "reference": "projecten",
+        "file": "projecten.handlebars",
+        "path": "/projects",
+        "collections": [
+            {
+                "source": "orbisdb",
+                "slug": "projects",
+                "key": "post_type",
+                "value": "project",
+                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' ORDER BY position DESC;"
+            }
+        ],
+        "ripples": []
+    },
+    {
+        "reference": "blog",
+        "file": "blog.handlebars",
+        "path": "/{slug}/",
+        "collections": [],
+        "ripples": []
+    }
+]

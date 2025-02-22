@@ -1,0 +1,16 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "python3 -m http.server 8082",
+    "sass": "sass scss/styles.scss css/styles.css && scp css/styles.css joera:/srv/",
+    "deploy": "scp css/styles.css joera:/srv/neutral_hosting/public/joeramulders/css/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  },
+  "dependencies": {
+    "form-data": "^4.0.1",
+    "node-fetch": "^2.7.0"
+  }
+}

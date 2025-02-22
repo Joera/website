@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+{{> head }}
+<body>
+    <header>
+        <img id="header4" src="https://neutralpress.mypinata.cloud/ipfs/QmRDocC778sJ4HRH7pKwfrn2omdPy339BcvzULx2uBCS7C?pinataGatewayToken=51Ucxk8MmSXnYAUZi-RcGR3iGluEI-DaiyD6B7basTbqAVkZZZBugKNJj-wK7arr" alt="Joera Mulders">
+        {{> language-switcher}}
+       
+    </header>
+    <main>
+        <section id="introduction" class="container medium_container">
+            <h1>Joera Mulders</h1>
+            <h2>{{#ifEquals language "en"}}Building new foundations for trust{{/ifEquals}}{{#ifEquals language "nl" }}Werken aan nieuw vertrouwen{{/ifEquals}}</h2>
+        </section>
+        <section id="introduction_text" class="container small_container">
+            {{{ backgroundify collections.home_intro.[0].content}}}
+        </section>
+    <div id="overlay">
+        <section id="components" class="container medium_container flex_row">
+            {{#each collections.home_features as |feature|}}
+            <article {{#if (indexEqualsZero @index)}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{feature.slug}}')">
+                <div class="top">
+                    <span>{{feature.subtitle}}</span>
+                </div>
+                <h3>{{feature.title}}</h3>
+                <div class="bottom">
+                    {{feature.summary}}
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"><path d="M25.81,39.58l23.83,23.83,23.83-23.83-2.98-2.98-20.85,20.85-20.85-20.85-2.98,2.98Z"/></svg>
+                </div>
+            </article>
+            {{/each}}
+        </section>
+
+        <section id="component_tabs" class="container medium_container">
+           
+           {{#each collections.home_features as |feature|}}
+            <article id="component_tab_{{feature.slug}}" class="component_tab" {{#if (indexEqualsZero @index)}}style="display: flex;"{{/if}}>
+                {{{feature.content}}}
+            </article>
+            {{/each}}
+
+        </section>
+
+        <section id="proposal" class="container medium_container left-aliging">
+            <article>
+                <h3>{{collections.home_proposal.[0].subtitle}}</h3>
+                {{{collections.home_proposal.[0].content}}}
+            </article>
+
+            <article>   
+                <ul>
+                    <li>Joera Mulders</li>
+                    <li>Nassaukade 169b</li>
+                    </li>1053LL Amsterdam</li>
+                </ul>
+                <ul>
+                    <li>KVK 34329847</li>
+                    <li>NL131571163B01</li>
+                    <li>NL18 ING B0004 6309 15</li>
+                    {{!-- <li>--</li> --}}
+                </ul>
+                <ul>
+                    <li>joera@joeramulders.com</li>
+                    <li>telegram: @joeramulders</li>
+                    <li>wallet: joera@p2p-citizen.eth</li>
+
+                </ul>
+            </article>
+   
+        </section>
+
+        <section class="images_container container small_container">
+
+            <img id="w4" src="https://neutralpress.mypinata.cloud/ipfs/QmZJ6DmYETG6nsbTrLDBabgQeCpLK8e4iUkdnuqk6atp9z?pinataGatewayToken=51Ucxk8MmSXnYAUZi-RcGR3iGluEI-DaiyD6B7basTbqAVkZZZBugKNJj-wK7arr" alt="Joera Mulders">
+            <img id="w3" src="https://neutralpress.mypinata.cloud/ipfs/QmPPZ4KMHfKcfn3Uii4odb2ubyJVFWCiN7ipGCjsUgeVvp?pinataGatewayToken=51Ucxk8MmSXnYAUZi-RcGR3iGluEI-DaiyD6B7basTbqAVkZZZBugKNJj-wK7arr" alt="Joera Mulders">
+
+        </section>  
+
+        <section id="about" class="container medium_container right-aliging">
+            <article></article>
+            <article>
+                <h3>Over Joera</h3>
+                {{{collections.home_about.[0].content}}}
+            </article>
+        </section>
+
+        
+
+        <section id="blogs" class="container small_container"></section>
+
+        </section>
+
+    </div>
+    </main>
+</body>
+</html>
+
+<script>
+function toggleComponent(tabEl,componentId) {
+    document.querySelectorAll('#components article').forEach(tab => {
+        console.log(tab);
+        tab.classList.remove('active');
+    });
+    tabEl.classList.add('active');
+    const componentTab = document.getElementById(componentId);
+    const isVisible = componentTab.style.display === 'flex';
+
+    // Hide all component tabs
+    const allTabs = document.querySelectorAll('.component_tab');
+    allTabs.forEach(tab => {
+        tab.style.display = 'none';
+    });
+
+    // Toggle the clicked component tab
+    componentTab.style.display = 'flex';
+}
+</script>

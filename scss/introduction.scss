@@ -1,0 +1,33 @@
+@use 'breakpoints';
+
+#introduction {
+    margin: 12rem auto 0  auto;
+
+    @media screen and (min-width: breakpoints.$breakpoint-medium) {
+        margin: 2rem auto 0  auto;
+        max-width: 600px;
+    }
+
+    @media screen and (min-width: breakpoints.$breakpoint-large) {
+        margin: -1rem auto 0  auto;
+        max-width: none;
+    }
+}
+
+#introduction_text {    
+    margin: 2rem auto 0rem auto;
+}
+
+#introduction_text p {
+    margin: 0 0 1.55rem 0;
+}
+
+.white_bg {
+    // background-color: #fff;
+    // // color: #FFF;
+    // box-shadow: -10px 0px 0 5px #fff,
+    //   10px 0px 0 5px #fff,
+    //   0 0 0 5px #fff;
+    // box-decoration-break: clone;
+    // border-radius: 8px;
+}

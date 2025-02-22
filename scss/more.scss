@@ -1,0 +1,42 @@
+.more_link {
+
+    position: relative;
+    border-color: black;
+
+    svg {
+
+        position: absolute;
+        top: -.125rem;
+        left: -2.25rem;
+        width: 2rem;
+        height: auto;
+        transition: all 0.3s ease;
+    }
+}
+
+.hidden_link {
+
+    svg {
+        top: -.5rem;
+        transform: rotate(180deg);
+    }
+
+    span { 
+        display: none;
+    }        
+}
+
+.more {
+
+    display: none;
+    flex-direction: column;
+
+    &.active {
+        display: flex;
+
+    }
+
+    p:empty {
+        display: none;
+    }
+}

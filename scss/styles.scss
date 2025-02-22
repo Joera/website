@@ -1,0 +1,26 @@
+// Your SCSS styles go here
+
+@use 'main';
+@use 'typography';
+@use 'containers';
+@use 'layouts';
+@use 'nav';
+@use 'header';
+@use 'components';
+@use 'introduction';
+@use 'proposal';
+@use 'about';
+@use 'images';
+@use 'projecten';
+@use 'more';
+@use 'blog';
+
+
+#blog_container {
+
+    .blog {
+        width: 100%;
+    }
+
+}
+

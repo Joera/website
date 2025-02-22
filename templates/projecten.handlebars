@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8    ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joera Mulders</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7060374/7785032/css/fonts.css" />
+</head>
+<body id="page_projecten">
+    <header>
+        <img id="header4" src="https://neutralpress.mypinata.cloud/ipfs/QmRDocC778sJ4HRH7pKwfrn2omdPy339BcvzULx2uBCS7C?pinataGatewayToken=51Ucxk8MmSXnYAUZi-RcGR3iGluEI-DaiyD6B7basTbqAVkZZZBugKNJj-wK7arr" alt="Joera Mulders">
+        {{> language-switcher}}
+       
+    </header>
+    <main>
+        <section id="introduction" class="container medium_container">
+            <h1>Joera Mulders</h1>
+            <h2>Projecten</h2>
+        </section>
+        {{!-- <section id="introduction_text" class="container small_container">
+            {{{collections.home_intro.[0].content}}}
+        </section> --}}
+    <div id="overlay">
+        <section id="projects" class="container small_container">
+            {{#each collections.projects as |project|}}
+            <article class="project">
+                <div class="top">
+                    <span>{{project.subtitle}}</span>
+                </div>
+                <h3>{{project.title}}</h3>
+                <div class="bottom">
+                    {{{ moreTag project.content}}}
+                </div>
+            </article>
+            {{/each}}
+        </section>
+
+        <section id="blogs" class="container small_container"></section>
+
+       
+
+    </div>
+    </main>
+</body>
+</html>
+
+<script>
+    const more_links = document.querySelectorAll("a.more_link");
+    for (let more_link of more_links) {
+        more_link.onclick = function() {
+            more_link.parentElement.classList.toggle('hidden_link');
+            const extra_div = this.parentElement.parentElement.querySelector('.more');
+            extra_div.classList.toggle('active');
+        }
+    }
+</script>

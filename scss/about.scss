@@ -1,0 +1,41 @@
+@use 'breakpoints';
+
+#about {
+
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch; 
+    margin: 3rem auto;
+
+    @media screen and (min-width: breakpoints.$breakpoint-medium) {
+        flex-direction: row;
+    }
+
+    article:first-of-type {
+        
+        // border-left: 1px solid black;
+        
+        margin-right: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    article:last-of-type {
+     
+        max-width: 600px; // Adjust as needed
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px; 
+
+        img {
+            max-width: 240px;
+            max-height: 240px;
+            border-radius: 50%;
+            margin: 1.5rem auto 3rem auto;
+        }
+    }
+}
