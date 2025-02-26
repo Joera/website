@@ -292,6 +292,13 @@ h1 {
   }
 }
 
+h3, h4 {
+  font-family: "Quarto A", "Quarto B";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 /* Component styles go here */
 #components {
   margin: 0rem auto 3rem auto;
