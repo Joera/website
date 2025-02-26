@@ -39,6 +39,18 @@ h3 {
   font-style: italic;
 }
 
+h5 {
+
+  font-family: "Quarto A", "Quarto B";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  margin: 0;
+  text-transform: lowercase;
+  font-style: italic;
+}
+
 a {
   color: var(--black);
   text-decoration: none;
