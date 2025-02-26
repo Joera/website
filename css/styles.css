@@ -43,6 +43,17 @@ article h3 {
   margin-bottom: 1.5rem;
 }
 
+h4 {
+  font-family: "Quarto A", "Quarto B";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.05;
+  margin: 0;
+  text-transform: lowercase;
+  font-style: italic;
+}
+
 a {
   color: var(--black);
   text-decoration: none;
