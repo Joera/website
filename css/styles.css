@@ -60,6 +60,10 @@ p > span {
   box-decoration-break: clone;
 }
 
+em {
+  font-style: italic;
+}
+
 html {
   position: relative;
   width: 100vw;
