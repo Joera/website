@@ -43,7 +43,7 @@ article h3 {
   margin-bottom: 1.5rem;
 }
 
-h4 {
+h4, h5, h6 {
   font-family: "Quarto A", "Quarto B";
   font-style: normal;
   font-weight: 700;
@@ -290,13 +290,6 @@ h1 {
   h2 {
     max-width: 480px;
   }
-}
-
-h3, h4 {
-  font-family: "Quarto A", "Quarto B";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
 }
 
 /* Component styles go here */
