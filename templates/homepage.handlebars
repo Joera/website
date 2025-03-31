@@ -23,7 +23,7 @@
     <div id="overlay">
         <section id="components" class="container medium_container flex_row">
             {{#each home_features}}
-                <article {{#if eq(@index 0)}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{this.slug}}')">
+                <article {{#if (eq@index "0")}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{this.slug}}')">
                     <div class="top">
                         <span>{{this.custom.subtitle}}</span>
                     </div>
@@ -39,7 +39,7 @@
         <section id="component_tabs" class="container medium_container">
            
            {{#each home_features}}
-            <article id="component_tab_{{this.slug}}" class="component_tab" {{#if eq(@index 0)}}style="display: flex;"{{/if}}>
+            <article id="component_tab_{{this.slug}}" class="component_tab" {{#if (eq @index "0")}}style="display: flex;"{{/if}}>
                 {{{this.content}}}
             </article>
             {{/each}}
