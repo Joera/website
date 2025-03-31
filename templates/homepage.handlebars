@@ -40,9 +40,9 @@
 
         <section id="component_tabs" class="container medium_container">
            
-           {{#each home_features as |feature|}}
-            <article id="component_tab_{{feature.slug}}" class="component_tab" {{#if (indexEqualsZero @index)}}style="display: flex;"{{/if}}>
-                {{{feature.content}}}
+           {{#each home_features}}
+            <article id="component_tab_{{this.slug}}" class="component_tab" {{#if (indexEqualsZero @index)}}style="display: flex;"{{/if}}>
+                {{{this.content}}}
             </article>
             {{/each}}
 
