@@ -23,7 +23,9 @@
     <div id="overlay">
         <section id="components" class="container medium_container flex_row">
             {{#each home_features}}
+            {{json this }} {{@index}}
                 <article {{#if (indexEqualsZero @index)}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{this.slug}}')">
+
                     <div class="top">
                         <span>{{this.subtitle}}</span>
                     </div>
