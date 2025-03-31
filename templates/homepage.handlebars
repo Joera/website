@@ -24,8 +24,6 @@
         <section id="components" class="container medium_container flex_row">
             {{#each home_features}}
                 <article {{#if eq(@index 0)}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{this.slug}}')">
-
-                {{json this.custom}}
                     <div class="top">
                         <span>{{this.custom.subtitle}}</span>
                     </div>
