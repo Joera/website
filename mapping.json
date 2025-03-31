@@ -38,7 +38,7 @@
     {
         "reference": "projecten",
         "file": "projecten.handlebars",
-        "path": "/projects",
+        "path": "/projects/",
         "collections": [
             {
                 "source": "orbisdb",

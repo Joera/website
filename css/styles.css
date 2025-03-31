@@ -54,10 +54,6 @@ h4, h5, h6 {
   font-style: italic;
 }
 
-.smtngg {
-  color: #666;
-}
-
 a {
   color: var(--black);
   text-decoration: none;
@@ -77,6 +73,10 @@ p > span {
 
 em {
   font-style: italic;
+}
+
+.bla {
+  color: #999;
 }
 
 html {
@@ -602,6 +602,17 @@ span {
 }
 .image_single img {
   width: 100%;
+}
+
+#blog h3 {
+  font-family: "Hoefler Text A", "Hoefler Text B";
+  font-size: 1.25rem;
+  line-height: 1.55;
+  font-style: normal;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 0rem;
+  text-transform: none;
 }
 
 #blog_container .blog {

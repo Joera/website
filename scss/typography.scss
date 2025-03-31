@@ -8,13 +8,11 @@
     font-style: normal;
     font-weight: 400;
     color: #444;
-
 }
 
 @mixin uppercase {
     
     font-family: "Gotham A", "Gotham B";
-   
     font-style: normal;
     font-weight: 500;
     text-transform: uppercase;
@@ -74,11 +72,6 @@ h4, h5, h6 {
     font-style: italic;
 }
 
-.smtngg {
-    color: #666;
-}
-
-
 a {
     color:  var(--black);
     text-decoration: none;
@@ -90,8 +83,6 @@ p {
     margin-bottom: 1.55rem;
 }
 
-
-
 p > span {
     background-color: var(--greybackground);
     box-shadow: -10px 0px 0 7px var(--greybackground),
@@ -102,4 +93,8 @@ p > span {
 
 em {
     font-style: italic;
+}
+
+.bla {
+    color: #999;
 }
