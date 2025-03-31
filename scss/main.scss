@@ -86,11 +86,10 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     min-height: calc(100vh);
- //   border-top: 1px solid #aaa;
- //   box-shadow: inset 0px 10px 50px rgba(4, 4, 4, 0.2);
 
     @media screen and (min-width: breakpoints.$breakpoint-small) {
-        margin-top: 0;   
+        margin-top: 0;  
+        min-height: calc(100vh - 120px); 
 
     }
 
