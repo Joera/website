@@ -16,8 +16,9 @@
         </section>
     <div id="overlay">
         <section id="components" class="container medium_container flex_row">
-            {{ json home_features }}
+          
             {{#each home_features as |feature|}}
+            {{ json feature }}
             <article {{#if (indexEqualsZero @index)}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{feature.slug}}')">
                 <div class="top">
                     <span>{{feature.subtitle}}</span>
