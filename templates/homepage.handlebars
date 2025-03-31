@@ -22,19 +22,17 @@
         </section>
     <div id="overlay">
         <section id="components" class="container medium_container flex_row">
-          
-            {{#each home_features as |feature|}}
-            {{ json feature }}
-            <article {{#if (indexEqualsZero @index)}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{feature.slug}}')">
-                <div class="top">
-                    <span>{{feature.subtitle}}</span>
-                </div>
-                <h3>{{feature.title}}</h3>
-                <div class="bottom">
-                    {{feature.summary}}
-                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"><path d="M25.81,39.58l23.83,23.83,23.83-23.83-2.98-2.98-20.85,20.85-20.85-20.85-2.98,2.98Z"/></svg>
-                </div>
-            </article>
+            {{#each home_features}}
+                <article {{#if (indexEqualsZero @index)}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{this.slug}}')">
+                    <div class="top">
+                        <span>{{this.subtitle}}</span>
+                    </div>
+                    <h3>{{this.title}}</h3>
+                    <div class="bottom">
+                        {{this.summary}}
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"><path d="M25.81,39.58l23.83,23.83,23.83-23.83-2.98-2.98-20.85,20.85-20.85-20.85-2.98,2.98Z"/></svg>
+                    </div>
+                </article>
             {{/each}}
         </section>
 
