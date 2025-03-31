@@ -109,14 +109,10 @@ function toggleComponent(tabEl,componentId) {
     tabEl.classList.add('active');
     const componentTab = document.getElementById(componentId);
     const isVisible = componentTab.style.display === 'flex';
-
-    // Hide all component tabs
     const allTabs = document.querySelectorAll('.component_tab');
     allTabs.forEach(tab => {
         tab.style.display = 'none';
     });
-
-    // Toggle the clicked component tab
     componentTab.style.display = 'flex';
 }
 </script>
