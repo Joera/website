@@ -9,7 +9,13 @@
     <main>
         <section id="introduction" class="container medium_container">
             <h1>Joera Mulders</h1>
-            <h2>{{#ifEquals language "en"}}Building new foundations for trust{{/ifEquals}}{{#ifEquals language "nl" }}Werken aan nieuw vertrouwen{{/ifEquals}}</h2>
+            <h2>
+            {{#if (eq language "en")}}
+        Building new foundations for trust
+    {{else}}
+        Werken aan nieuw vertrouwen
+    {{/if}}
+    </h2>
         </section>
         <section id="introduction_text" class="container small_container">
             {{{ backgroundify home_intro.[0].content}}}
