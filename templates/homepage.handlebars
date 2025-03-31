@@ -5,11 +5,8 @@
     <header>
         <img id="header4" src="https://neutralpress.mypinata.cloud/ipfs/bafybeihpzhq43jqqh3xeii5mbp6cujvndneohkmhtkmza6gn5aeojpq4fu" alt="Joera Mulders">
         {{> language-switcher}}
-       
     </header>
     <main>
-        {{this}}
-        {{language}}
         <section id="introduction" class="container medium_container">
             <h1>Joera Mulders</h1>
             <h2>{{#ifEquals language "en"}}Building new foundations for trust{{/ifEquals}}{{#ifEquals language "nl" }}Werken aan nieuw vertrouwen{{/ifEquals}}</h2>
@@ -19,6 +16,7 @@
         </section>
     <div id="overlay">
         <section id="components" class="container medium_container flex_row">
+            {{ json home_features }}
             {{#each home_features as |feature|}}
             <article {{#if (indexEqualsZero @index)}}class="active"{{/if}} onclick="toggleComponent(this,'component_tab_{{feature.slug}}')">
                 <div class="top">
