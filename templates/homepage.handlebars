@@ -84,7 +84,13 @@
         <section id="about" class="container medium_container right-aliging">
             <article></article>
             <article>
-                <h3>Over Joera</h3>
+                <h3>
+                    {{#if (eq language "en")}}
+                    About Joera
+                    {{else}}
+                    Over Joera
+                    {{/if}}
+                    </h3>
                 {{{home_about.[0].content}}}
             </article>
         </section>
