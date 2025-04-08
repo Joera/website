@@ -621,6 +621,15 @@ span {
   text-transform: none;
 }
 
+#blogs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#blogs ul li {
+  margin: 0.75rem 0;
+}
+
 #blog_container .blog {
   width: 100%;
 }

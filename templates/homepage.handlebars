@@ -9,7 +9,7 @@
     <main>
         <section id="introduction" class="container medium_container">
             <h1>Joera Mulders</h1>
-            <h2>{{language}}
+            <h2>
             {{#if (eq language "en")}}
         Building new foundations for trust
     {{else}}
@@ -98,6 +98,12 @@
         
 
         <section id="blogs" class="container small_container"></section>
+
+            <ul>
+            {{#each blogs}}
+                <li>{{this.creation_date}} <a href="{{this.slug}}">{{this.title}}</a></li>
+            {{/each}}
+            </ul>
 
         </section>
 

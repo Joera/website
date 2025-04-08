@@ -31,6 +31,13 @@
                 "key": "post_type",
                 "value": "home-feature",
                 "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}' ORDER BY position ASC;"
+            },
+            {
+                "source": "orbisdb",
+                "slug": "blogs",
+                "key": "post_type",
+                "value": "blog",
+                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}' ORDER BY position ASC;"
             }
         ],
         "ripples": []
