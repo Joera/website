@@ -101,7 +101,7 @@
 
             <ul>
             {{#each blogs}}
-                <li>{{this.creation_date}} <a href="{{this.slug}}">{{this.title}}</a></li>
+                <li>{{ formatDate this.creation_date}} <a href="{{this.slug}}">{{this.title}}</a></li>
             {{/each}}
             </ul>
 
