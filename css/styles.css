@@ -630,6 +630,10 @@ span {
   margin: 0.75rem 0;
 }
 
+#blogs {
+  margin: 2rem 0 4rem 0;
+}
+
 #blog_container .blog {
   width: 100%;
 }
