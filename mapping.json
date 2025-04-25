@@ -16,28 +16,28 @@
                 "slug": "home_proposal",
                 "key": "post_type",
                 "value": "home-proposal",
-                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}'"
+                "query": "SELECT * FROM {{table}} WHERE publication = '{{publication}}' AND {{key}} = '{{value}}' AND language = '{{lang}}'"
             },
             {
                 "source": "orbisdb",
                 "slug": "home_about",
                 "key": "post_type",
                 "value": "home-about",
-                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}'"
+                "query": "SELECT * FROM {{table}} WHERE publication = '{{publication}}' AND{{key}} = '{{value}}' AND language = '{{lang}}'"
             },
             {
                 "source": "orbisdb",
                 "slug": "home_features",
                 "key": "post_type",
                 "value": "home-feature",
-                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}' ORDER BY position ASC;"
+                "query": "SELECT * FROM {{table}} WHERE publication = '{{publication}}' AND{{key}} = '{{value}}' AND language = '{{lang}}' ORDER BY position ASC;"
             },
             {
                 "source": "orbisdb",
                 "slug": "blogs",
                 "key": "post_type",
                 "value": "blog",
-                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}' ORDER BY position ASC;"
+                "query": "SELECT * FROM {{table}} WHERE publication = '{{publication}}' AND {{key}} = '{{value}}' AND language = '{{lang}}' ORDER BY position ASC;"
             }
         ],
         "ripples": []
@@ -52,7 +52,7 @@
                 "slug": "projects",
                 "key": "post_type",
                 "value": "project",
-                "query": "SELECT * FROM {{table}} WHERE {{key}} = '{{value}}' AND language = '{{lang}}' AND status = 'publish' ORDER BY position DESC;"
+                "query": "SELECT * FROM {{table}} WHERE publication = '{{publication}}' AND{{key}} = '{{value}}' AND language = '{{lang}}' AND status = 'publish' ORDER BY position DESC;"
             }
         ],
         "ripples": []
