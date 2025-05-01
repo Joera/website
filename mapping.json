@@ -58,10 +58,7 @@
     "ripples" : [
         {
             "types" : ["blog"],
-            "condition" : false,
-            "query" : {
-              "query": "SELECT * FROM {{table}} WHERE publications ? '{{publication}}' AND post_type = 'home-intro' AND language = '{{lang}}' ORDER BY creation_date ASC;"
-            }
+            "query" : "SELECT * FROM {{table}} WHERE publications ? '{{publication}}' AND post_type = 'home-intro' AND language = '{{lang}}' ORDER BY creation_date ASC;"
           }
       
     ]
