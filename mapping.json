@@ -57,11 +57,12 @@
     }],
     "ripples" : [
         {
-            "reference": "blog",
-            "file": "blog.handlebars",
-            "path": "/{slug}/",
-            "collections": [],
-            "ripples": ["homepage"]
-        }
+            "types" : ["blog"],
+            "condition" : false,
+            "query" : {
+              "query": "SELECT * FROM {{table}} WHERE publications ? '{{publication}}' AND post_type = 'home-intro' AND language = '{{lang}}' ORDER BY creation_date ASC;"
+            }
+          }
+      
     ]
 }
