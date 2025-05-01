@@ -57,7 +57,8 @@
     }],
     "ripples" : [
         {
-            "types" : ["blog"],
+            "origins" : ["blog"],
+            "destination" : "homepage",
             "reference": "home-intro",
             "query" : "SELECT * FROM {{table}} WHERE publications ? '{{publication}}' AND post_type = 'home-intro' AND language = '{{lang}}' ORDER BY creation_date ASC;"
         }
