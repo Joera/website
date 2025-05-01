@@ -1,4 +1,4 @@
-{ "templateDataConfig": [
+{ "templateConfig": [
     {
         "reference": "homepage",
         "file": "homepage.handlebars",
