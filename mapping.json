@@ -1,4 +1,4 @@
-[
+{ "templateData": [
     {
         "reference": "homepage",
         "file": "homepage.handlebars",
@@ -39,8 +39,7 @@
                 "value": "blog",
                 "query": "SELECT * FROM {{table}} WHERE publications ? '{{publication}}' AND {{key}} = '{{value}}' AND language = '{{lang}}' ORDER BY position ASC;"
             }
-        ],
-        "ripples": []
+        ]
     },
     {
         "reference": "projecten",
@@ -54,14 +53,15 @@
                 "value": "project",
                 "query": "SELECT * FROM {{table}} WHERE publications ? '{{publication}}' AND {{key}} = '{{value}}' AND language = '{{lang}}' AND status = 'publish' ORDER BY position DESC;"
             }
-        ],
-        "ripples": []
-    },
-    {
-        "reference": "blog",
-        "file": "blog.handlebars",
-        "path": "/{slug}/",
-        "collections": [],
-        "ripples": ["homepage"]
-    }
-]
+        ]
+    }],
+    "ripples" : [
+        {
+            "reference": "blog",
+            "file": "blog.handlebars",
+            "path": "/{slug}/",
+            "collections": [],
+            "ripples": ["homepage"]
+        }
+    ]
+}
