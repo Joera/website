@@ -1,4 +1,4 @@
-{ "templateData": [
+{ "templateDataConfig": [
     {
         "reference": "homepage",
         "file": "homepage.handlebars",
@@ -58,8 +58,8 @@
     "ripples" : [
         {
             "types" : ["blog"],
+            "reference": "home-intro",
             "query" : "SELECT * FROM {{table}} WHERE publications ? '{{publication}}' AND post_type = 'home-intro' AND language = '{{lang}}' ORDER BY creation_date ASC;"
-          }
-      
+        }
     ]
 }
